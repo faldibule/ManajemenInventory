@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c62b3e9-87d6-4867-a7df-257f585ea381">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `gudang`]]>
+	</queryString>
+	<field name="kd_gudang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_gudang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="122315e1-d89a-48a7-a3bd-5d27e4e346f8"/>
+				<text><![CDATA[PT. INDAH ABADI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="186" height="20" uuid="ec7d4644-2b51-46d4-812c-dd8ba659cfa9"/>
+				<text><![CDATA[Jl. Kampung Sawah, Kabupaten Bogor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="10" width="206" height="22" uuid="a5819f95-15c8-4757-8385-49e8e3798492"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA GUDANG]]></text>
+			</staticText>
+			<line>
+				<reportElement x="169" y="32" width="206" height="1" uuid="e8270d72-8276-4971-b0fe-b5b42e373fa1"/>
+			</line>
+			<textField>
+				<reportElement x="52" y="58" width="423" height="20" uuid="d7268d7f-1728-43c1-be2c-ea5115137304"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEE, d MMM YYYY").format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="58" width="100" height="20" uuid="a94d5298-85bb-410e-aa8f-ff5beeac2e43"/>
+				<text><![CDATA[Tanggal	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="78" width="100" height="20" uuid="916202fe-ebe3-4d0d-bfea-2a02a15c5861"/>
+				<text><![CDATA[Alamat	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="78" width="204" height="20" uuid="186eae81-640d-4f69-9c5e-2bd900ef026d"/>
+				<text><![CDATA[Jalan Kampung Sawah, Kabupaten Bogor]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="20" uuid="ae5b31b2-d38a-4d3d-b1e2-02c9de3b8276"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE GUDANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="10" width="100" height="20" uuid="87ce424d-b7a5-4434-ab05-f8f10e0e8a76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA GUDANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="10" width="100" height="20" uuid="030e352e-5d15-429b-ac37-4ab4b50e5b1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="7" width="555" height="1" uuid="8d2ec73c-f217-4693-923d-e576d1557721"/>
+			</line>
+			<line>
+				<reportElement x="0" y="33" width="555" height="1" uuid="5f382923-c6ab-47d6-9be8-b830a4226d30"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="6" width="100" height="20" uuid="b98e03ef-9161-4ad9-91f9-85487eca6068"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kd_gudang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="6" width="100" height="20" uuid="7c0934ed-3c1b-4d77-bf8f-372f734da1e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama_gudang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="6" width="100" height="20" uuid="ded99f7d-34fb-4451-a8fb-524eb04b3fcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="31" width="555" height="1" uuid="59667102-1e3b-4f3e-aa76-03c8117d179c"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="96" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="6" width="100" height="20" uuid="3ab1135d-f52b-4d04-b44b-2fcc8c007e41"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Pemberi Kuasa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="100" height="20" uuid="dafbc07a-1fed-4ed1-a48f-0f43d522f662"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(		)]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
