@@ -31,19 +31,19 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="60" splitType="Stretch">
+		<band height="63" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="100" height="20" uuid="a34368a8-1527-4bbc-8386-56027c6db1f4"/>
-				<text><![CDATA[PT. INDAH ABADI]]></text>
+				<reportElement x="0" y="15" width="100" height="20" uuid="a34368a8-1527-4bbc-8386-56027c6db1f4"/>
+				<text><![CDATA[PT. Ismoyo Express]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="0" y="15" width="176" height="20" uuid="fa202c78-44d8-43f9-ba1e-54e29c175c40"/>
-				<text><![CDATA[Jl. Kampung sawah kabupaten bogor]]></text>
-			</staticText>
+			<image>
+				<reportElement x="712" y="0" width="64" height="63" uuid="c0d7695e-c0a7-493d-bae8-a7b352c4e7fa"/>
+				<imageExpression><![CDATA["C:\\Users\\Bule\\Documents\\NetBeansProjects\\ManajemenInventory\\src\\manajemeninventory\\50X50.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="101" splitType="Stretch">
+		<band height="190" splitType="Stretch">
 			<staticText>
 				<reportElement x="299" y="0" width="205" height="23" uuid="b20cef97-7e62-4dd5-8e59-c6b43dfb3ebc"/>
 				<textElement>
@@ -52,24 +52,24 @@
 				<text><![CDATA[LAPORAN DATA BARANG]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="34" width="100" height="20" uuid="e59fe247-e598-45a4-bec2-6aefd90de865"/>
+				<reportElement x="0" y="95" width="100" height="20" uuid="e59fe247-e598-45a4-bec2-6aefd90de865"/>
 				<text><![CDATA[Tanggal	:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="66" width="100" height="20" uuid="e6f55c62-b6e3-4aee-820d-06a8bf239bd1"/>
+				<reportElement x="0" y="127" width="100" height="20" uuid="e6f55c62-b6e3-4aee-820d-06a8bf239bd1"/>
 				<text><![CDATA[Alamat	:]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="100" y="66" width="176" height="20" uuid="1eb03329-137a-4eef-a62e-ded61c3be51d"/>
-				<text><![CDATA[Jl. Kampung sawah kabupaten bogor]]></text>
-			</staticText>
 			<textField>
-				<reportElement x="100" y="34" width="176" height="20" uuid="a43cf0fe-fec7-4e75-b3ee-cb8d437950a8"/>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("EEE, d MMM yyyy").format(new Date())]]></textFieldExpression>
+				<reportElement x="100" y="95" width="457" height="20" uuid="a43cf0fe-fec7-4e75-b3ee-cb8d437950a8"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement x="299" y="23" width="205" height="1" uuid="90370a33-9b51-4314-b7df-6dee25cc4cb7"/>
 			</line>
+			<staticText>
+				<reportElement x="100" y="127" width="432" height="37" uuid="fa202c78-44d8-43f9-ba1e-54e29c175c40"/>
+				<text><![CDATA[Jl. M. Kahfi II, No. 90, Ruko Cahaya Timbul Blok C9, RT 13/RW 9, Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan, 12630]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>

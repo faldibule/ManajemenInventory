@@ -25,22 +25,22 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="42" splitType="Stretch">
+		<band height="55" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="100" height="22" uuid="8f6c6377-f6a2-4bb6-9aed-daf111e7ed64"/>
+				<reportElement x="2" y="10" width="100" height="22" uuid="9f97afd5-89f0-4f69-86ec-d61bff29c867"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[PT.INDAH ABADI]]></text>
+				<text><![CDATA[PT. Ismoyo Express]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="0" y="15" width="223" height="20" uuid="5d3f6a81-6f00-47b8-b221-46b0f718c4fc"/>
-				<text><![CDATA[Jl. Kampung sawah indah, Kabupaten Bogor]]></text>
-			</staticText>
+			<image>
+				<reportElement x="491" y="0" width="54" height="52" uuid="de83f346-4d12-4706-8151-23e0f82ef130"/>
+				<imageExpression><![CDATA["C:\\Users\\Bule\\Documents\\NetBeansProjects\\ManajemenInventory\\src\\manajemeninventory\\50X50.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="94" splitType="Stretch">
+		<band height="159" splitType="Stretch">
 			<staticText>
 				<reportElement x="152" y="0" width="255" height="28" uuid="9dba69b9-5f75-4e2f-b317-8de19f77c069"/>
 				<textElement textAlignment="Center">
@@ -49,24 +49,24 @@
 				<text><![CDATA[LAPORAN BARANG MASUK]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="47" width="98" height="20" uuid="9d112c21-a6ce-49ae-bc3e-2699025319ec"/>
+				<reportElement x="2" y="85" width="98" height="20" uuid="9d112c21-a6ce-49ae-bc3e-2699025319ec"/>
 				<text><![CDATA[Tanggal		: ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="67" width="98" height="20" uuid="768351df-c29f-4676-9d12-d8b09fde25b0"/>
+				<reportElement x="2" y="105" width="98" height="20" uuid="768351df-c29f-4676-9d12-d8b09fde25b0"/>
 				<text><![CDATA[Alamat	 	: ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="60" y="47" width="302" height="20" uuid="f5b1aa2c-4b34-4c53-9ee2-090388442547"/>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("EEE, d MMM yyyy").format(new Date())]]></textFieldExpression>
+				<reportElement x="60" y="85" width="464" height="20" uuid="f5b1aa2c-4b34-4c53-9ee2-090388442547"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="60" y="67" width="225" height="20" uuid="fcffa203-281f-4e17-a3d2-3d27a04c0370"/>
-				<text><![CDATA[Jl. Kampung sawah indah, Kabupaten Bogor]]></text>
-			</staticText>
 			<line>
 				<reportElement x="170" y="22" width="219" height="1" uuid="81af8845-09f4-4155-a1e0-d8bdc8b1e402"/>
 			</line>
+			<staticText>
+				<reportElement x="60" y="105" width="385" height="27" uuid="c16e68ed-a0a3-4d59-be14-90279ad44761"/>
+				<text><![CDATA[Jl. M. Kahfi II, No. 90, Ruko Cahaya Timbul Blok C9, RT 13/RW 9, Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan, 12630]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
