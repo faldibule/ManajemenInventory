@@ -2189,7 +2189,7 @@ public class IndexAdmin extends javax.swing.JFrame {
                       model.removeRow(row);
                       this.gd_refresh();
                 }catch(SQLException e){
-                    JOptionPane.showMessageDialog(null, "Gagal Dihapus");
+                    JOptionPane.showMessageDialog(null, "Gagal Dihapus"+e);
                 }
             }
         }
@@ -2863,24 +2863,12 @@ public class IndexAdmin extends javax.swing.JFrame {
 
     private void cetak_data_barangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cetak_data_barangActionPerformed
         // TODO add your handling code here:
-        int row = tabel_barang.getSelectedRow();
-        
-        int column1 = 0;
-        String kode = tabel_barang.getModel().getValueAt(row, column1).toString();
-        kd_barang.setText(kode);
         try{
-            if(row > 0){
-                String report = ("../../ManajemenInventory/src/reportData/dataBarang.jrxml"); 
-                HashMap hash = new HashMap<String, Object>();
-                JasperReport jrr = JasperCompileManager.compileReport(report);
-                hash.put("kode_barang", kd_barang.getText());
-                JasperPrint jpp = JasperFillManager.fillReport(jrr, hash, DB.getConnection());
-                JasperViewer.viewReport(jpp, false);
-            }else{
-                cetak_data_barang.setEnabled(false);
-            }
-            
-            
+            String report = ("../../ManajemenInventory/src/reportData/dataBarang.jrxml"); 
+            HashMap hash = new HashMap<String, Object>();
+            JasperReport jrr = JasperCompileManager.compileReport(report);
+            JasperPrint jpp = JasperFillManager.fillReport(jrr, hash, DB.getConnection());
+            JasperViewer.viewReport(jpp, false);
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Gagal karena "+e);
         }

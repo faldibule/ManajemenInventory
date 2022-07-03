@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="42f0321e-6d47-4ca6-8a1e-a78206c82a66">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="94"/>
 	<queryString>
 		<![CDATA[SELECT * FROM `barang_keluar`]]>
 	</queryString>
@@ -25,7 +25,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="55" splitType="Stretch">
+		<band height="75" splitType="Stretch">
 			<staticText>
 				<reportElement x="7" y="6" width="100" height="22" uuid="8f6c6377-f6a2-4bb6-9aed-daf111e7ed64"/>
 				<textElement>
@@ -37,36 +37,24 @@
 				<reportElement x="501" y="0" width="54" height="52" uuid="e83c1a94-ca4a-4008-a3af-e45e0504d990"/>
 				<imageExpression><![CDATA["C:\\Users\\Bule\\Documents\\NetBeansProjects\\ManajemenInventory\\src\\manajemeninventory\\50X50.png"]]></imageExpression>
 			</image>
+			<staticText>
+				<reportElement x="7" y="25" width="330" height="27" uuid="5d3f6a81-6f00-47b8-b221-46b0f718c4fc"/>
+				<text><![CDATA[Jl. M. Kahfi II, No. 90, Ruko Cahaya Timbul Blok C9, RT 13/RW 9, Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan, 12630]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="177" splitType="Stretch">
+		<band height="66" splitType="Stretch">
 			<staticText>
-				<reportElement x="152" y="0" width="255" height="28" uuid="9dba69b9-5f75-4e2f-b317-8de19f77c069"/>
+				<reportElement x="152" y="12" width="255" height="28" uuid="9dba69b9-5f75-4e2f-b317-8de19f77c069"/>
 				<textElement textAlignment="Center">
 					<font size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LAPORAN BARANG KELUAR]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="7" y="102" width="98" height="20" uuid="9d112c21-a6ce-49ae-bc3e-2699025319ec"/>
-				<text><![CDATA[Tanggal		: ]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="7" y="122" width="98" height="20" uuid="768351df-c29f-4676-9d12-d8b09fde25b0"/>
-				<text><![CDATA[Alamat	 	: ]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="105" y="102" width="419" height="20" uuid="f5b1aa2c-4b34-4c53-9ee2-090388442547"/>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
-			</textField>
 			<line>
-				<reportElement x="170" y="22" width="219" height="1" uuid="81af8845-09f4-4155-a1e0-d8bdc8b1e402"/>
+				<reportElement x="170" y="32" width="219" height="1" uuid="81af8845-09f4-4155-a1e0-d8bdc8b1e402"/>
 			</line>
-			<staticText>
-				<reportElement x="105" y="122" width="330" height="27" uuid="5d3f6a81-6f00-47b8-b221-46b0f718c4fc"/>
-				<text><![CDATA[Jl. M. Kahfi II, No. 90, Ruko Cahaya Timbul Blok C9, RT 13/RW 9, Srengseng Sawah, Kec. Jagakarsa, Jakarta Selatan, 12630]]></text>
-			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
@@ -113,36 +101,50 @@
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="419" y="19" width="100" height="20" uuid="75391466-4576-4d11-9b76-114f55695722"/>
-				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[new SimpleDateFormat("EEE, d MMM yyyy").format($F{tanggal_keluar})]]></textFieldExpression>
-			</textField>
 			<line>
 				<reportElement x="0" y="12" width="555" height="1" uuid="b217abd0-5440-48ba-97de-5e74f09951c8"/>
 			</line>
 			<line>
 				<reportElement x="0" y="39" width="555" height="1" uuid="40362334-f851-4374-9a54-9240a726f383"/>
 			</line>
+			<textField>
+				<reportElement x="419" y="20" width="505" height="20" uuid="26750113-cfe0-4388-8bae-d006ac5a0653"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format($F{tanggal_keluar})]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="98" splitType="Stretch">
+		<band height="127" splitType="Stretch">
 			<staticText>
-				<reportElement x="2" y="0" width="100" height="20" uuid="74679bcb-a508-4f99-a345-d5b0eb35923d"/>
+				<reportElement x="0" y="29" width="100" height="20" uuid="74679bcb-a508-4f99-a345-d5b0eb35923d"/>
 				<textElement textAlignment="Center"/>
-				<text><![CDATA[Pemberi Kuasa]]></text>
+				<text><![CDATA[Direktur]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="471" y="3" width="419" height="20" uuid="f5b1aa2c-4b34-4c53-9ee2-090388442547"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="429" y="3" width="98" height="20" uuid="b36859c2-33fa-4d63-9ce9-19f9a725acda"/>
+				<text><![CDATA[Jakarta, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="102" width="98" height="20" uuid="0fbf4082-93c8-47a6-955a-ca96bd09faf2"/>
+				<text><![CDATA[(    Ismoyo    )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="29" width="100" height="20" uuid="062eba81-181e-4c44-bd40-868f272b49b2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Manager Gudang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="103" width="98" height="20" uuid="e3e8e4ff-e98f-4209-a93d-9a799e4e9d96"/>
+				<text><![CDATA[(    Sutarno    )]]></text>
 			</staticText>
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="43" splitType="Stretch">
-			<staticText>
-				<reportElement x="1" y="-54" width="101" height="20" uuid="4b89bef3-78cd-429a-80ae-96367b82f4db"/>
-				<textElement textAlignment="Center"/>
-				<text><![CDATA[(		)]]></text>
-			</staticText>
-		</band>
+		<band height="43" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
 		<band height="42" splitType="Stretch"/>
